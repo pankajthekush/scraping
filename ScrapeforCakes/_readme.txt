@@ -1,0 +1,1 @@
+This bot is created with pyhon scrapy and it scrapes , the cakes information ,from https://www.fnp.com/cakes , please watch "Watch in Action" video to know more about it.
