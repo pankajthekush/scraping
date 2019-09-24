@@ -1,0 +1,423 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="getSource" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:aa="clr-namespace:AttendedRobotStatus.Activities;assembly=AttendedRobotStatus" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="sourcepath" Type="OutArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>546,2264</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>getSource_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="21">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="20">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.Python</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="getSource" sap:VirtualizedContainerService.HintSize="526,2204" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="source" />
+      <Variable x:TypeArguments="x:String" Name="title" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <aa:AttendedRobotStatus DisplayName="Attended Robot Status" ErrorLvl="False" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="AttendedRobotStatus_1" InfoLvl="False" Message="Wait For Page Load" WarnLvl="False" />
+    <While DisplayName="While page is not loaded" sap:VirtualizedContainerService.HintSize="484,233.333333333333" sap2010:WorkflowViewState.IdRef="While_1">
+      <While.Variables>
+        <Variable x:TypeArguments="x:String" Default="notloaded" Name="loadstatus" />
+        <Variable x:TypeArguments="x:Int32" Default="1" Name="ctr" />
+      </While.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <While.Condition>[loadstatus &lt;&gt; "loaded" and ctr &lt;= 5]</While.Condition>
+      <Sequence sap:VirtualizedContainerService.HintSize="200,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:InjectJsScript InputParameter="{x:Null}" DisplayName="Get page load status" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="InjectJsScript_5" ScriptCode="scripts\js\pageloadstatus.js">
+          <ui:InjectJsScript.ScriptOutput>
+            <OutArgument x:TypeArguments="x:String">[loadstatus]</OutArgument>
+          </ui:InjectJsScript.ScriptOutput>
+          <ui:InjectJsScript.Target>
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="48ab7caad13046b46b8a69685c2b8e89" Selector="&lt;html app='firefox.exe' title='*LinkedIn' /&gt;&lt;webctrl omit:id='ember40' tag='DIV' /&gt;" WaitForReady="INTERACTIVE">
+              <ui:Target.TimeoutMS>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:Target.TimeoutMS>
+            </ui:Target>
+          </ui:InjectJsScript.Target>
+        </ui:InjectJsScript>
+        <aa:AttendedRobotStatus DisplayName="Attended Robot Status" ErrorLvl="False" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="AttendedRobotStatus_2" InfoLvl="False" Message="Wait For Page Load" WarnLvl="False" />
+        <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 1 second" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_1">
+          <TextExpression.Namespaces>
+            <sco:Collection x:TypeArguments="x:String">
+              <x:String>System.Activities</x:String>
+              <x:String>System.Activities.Statements</x:String>
+              <x:String>System.Activities.Expressions</x:String>
+              <x:String>System.Activities.Validation</x:String>
+              <x:String>System.Activities.XamlIntegration</x:String>
+              <x:String>Microsoft.VisualBasic.Activities</x:String>
+              <x:String>System</x:String>
+              <x:String>System.Collections.Generic</x:String>
+              <x:String>System.Data</x:String>
+              <x:String>System.Diagnostics</x:String>
+              <x:String>System.IO</x:String>
+              <x:String>System.Linq</x:String>
+              <x:String>System.Management.Automation</x:String>
+              <x:String>System.Net.Mail</x:String>
+              <x:String>System.Xml</x:String>
+              <x:String>System.Xml.Linq</x:String>
+              <x:String>UiPath.Library</x:String>
+              <x:String>System.Windows.Markup</x:String>
+            </sco:Collection>
+          </TextExpression.Namespaces>
+          <TextExpression.References>
+            <sco:Collection x:TypeArguments="AssemblyReference">
+              <AssemblyReference>System.Activities</AssemblyReference>
+              <AssemblyReference>mscorlib</AssemblyReference>
+              <AssemblyReference>System.Data</AssemblyReference>
+              <AssemblyReference>System</AssemblyReference>
+              <AssemblyReference>System.Core</AssemblyReference>
+              <AssemblyReference>System.Management.Automation</AssemblyReference>
+              <AssemblyReference>System.Xml</AssemblyReference>
+              <AssemblyReference>System.Xml.Linq</AssemblyReference>
+              <AssemblyReference>UiPath.Library</AssemblyReference>
+              <AssemblyReference>PresentationFramework</AssemblyReference>
+              <AssemblyReference>WindowsBase</AssemblyReference>
+              <AssemblyReference>PresentationCore</AssemblyReference>
+              <AssemblyReference>System.Xaml</AssemblyReference>
+            </sco:Collection>
+          </TextExpression.References>
+          <sap2010:WorkflowViewState.ViewStateManager>
+            <sap2010:ViewStateManager>
+              <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="200,22" Id="Delay_1" />
+            </sap2010:ViewStateManager>
+          </sap2010:WorkflowViewState.ViewStateManager>
+        </Delay>
+        <Assign sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_1">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:Int32">[ctr]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:Int32">[ctr + 1]</InArgument>
+          </Assign.Value>
+        </Assign>
+      </Sequence>
+    </While>
+    <aa:AttendedRobotStatus DisplayName="Attended Robot Status" ErrorLvl="False" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="AttendedRobotStatus_3" InfoLvl="False" Message="Click More info links to load all data" WarnLvl="False" />
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click See More in information" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="388284010477918aa3421b73a39dd1bd" Selector="&lt;html app='firefox.exe' title='*LinkedIn' /&gt;&lt;webctrl omit:parentid='ember1091' tag='A' class='lt-line-clamp__more' href='#' innertext='see more' idx='1' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Click>
+    <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 1 second" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="Delay_1">
+      <TextExpression.Namespaces>
+        <sco:Collection x:TypeArguments="x:String">
+          <x:String>System.Activities</x:String>
+          <x:String>System.Activities.Statements</x:String>
+          <x:String>System.Activities.Expressions</x:String>
+          <x:String>System.Activities.Validation</x:String>
+          <x:String>System.Activities.XamlIntegration</x:String>
+          <x:String>Microsoft.VisualBasic.Activities</x:String>
+          <x:String>System</x:String>
+          <x:String>System.Collections.Generic</x:String>
+          <x:String>System.Data</x:String>
+          <x:String>System.Diagnostics</x:String>
+          <x:String>System.IO</x:String>
+          <x:String>System.Linq</x:String>
+          <x:String>System.Management.Automation</x:String>
+          <x:String>System.Net.Mail</x:String>
+          <x:String>System.Xml</x:String>
+          <x:String>System.Xml.Linq</x:String>
+          <x:String>UiPath.Library</x:String>
+          <x:String>System.Windows.Markup</x:String>
+        </sco:Collection>
+      </TextExpression.Namespaces>
+      <TextExpression.References>
+        <sco:Collection x:TypeArguments="AssemblyReference">
+          <AssemblyReference>System.Activities</AssemblyReference>
+          <AssemblyReference>mscorlib</AssemblyReference>
+          <AssemblyReference>System.Data</AssemblyReference>
+          <AssemblyReference>System</AssemblyReference>
+          <AssemblyReference>System.Core</AssemblyReference>
+          <AssemblyReference>System.Management.Automation</AssemblyReference>
+          <AssemblyReference>System.Xml</AssemblyReference>
+          <AssemblyReference>System.Xml.Linq</AssemblyReference>
+          <AssemblyReference>UiPath.Library</AssemblyReference>
+          <AssemblyReference>PresentationFramework</AssemblyReference>
+          <AssemblyReference>WindowsBase</AssemblyReference>
+          <AssemblyReference>PresentationCore</AssemblyReference>
+          <AssemblyReference>System.Xaml</AssemblyReference>
+        </sco:Collection>
+      </TextExpression.References>
+      <sap2010:WorkflowViewState.ViewStateManager>
+        <sap2010:ViewStateManager>
+          <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="200,22" Id="Delay_1" />
+        </sap2010:ViewStateManager>
+      </sap2010:WorkflowViewState.ViewStateManager>
+    </Delay>
+    <aa:AttendedRobotStatus DisplayName="Attended Robot Status" ErrorLvl="False" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="AttendedRobotStatus_4" InfoLvl="False" Message="Load More experiance if exist" WarnLvl="False" />
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Load More Expreiance" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="6a87e7f2c84aad9a81e714ca8075d9d0" Selector="&lt;html app='firefox.exe' title='*LinkedIn' /&gt;&lt;webctrl omit:parentid='ember696' tag='BUTTON' class='pv-profile-section__see-more-inline pv-profile-section__text-truncate-toggle link link-without-hover-state' /&gt;" TimeoutMS="2000" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Click>
+    <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 2 second" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="Delay_2">
+      <TextExpression.Namespaces>
+        <sco:Collection x:TypeArguments="x:String">
+          <x:String>System.Activities</x:String>
+          <x:String>System.Activities.Statements</x:String>
+          <x:String>System.Activities.Expressions</x:String>
+          <x:String>System.Activities.Validation</x:String>
+          <x:String>System.Activities.XamlIntegration</x:String>
+          <x:String>Microsoft.VisualBasic.Activities</x:String>
+          <x:String>System</x:String>
+          <x:String>System.Collections.Generic</x:String>
+          <x:String>System.Data</x:String>
+          <x:String>System.Diagnostics</x:String>
+          <x:String>System.IO</x:String>
+          <x:String>System.Linq</x:String>
+          <x:String>System.Management.Automation</x:String>
+          <x:String>System.Net.Mail</x:String>
+          <x:String>System.Xml</x:String>
+          <x:String>System.Xml.Linq</x:String>
+          <x:String>UiPath.Library</x:String>
+          <x:String>System.Windows.Markup</x:String>
+        </sco:Collection>
+      </TextExpression.Namespaces>
+      <TextExpression.References>
+        <sco:Collection x:TypeArguments="AssemblyReference">
+          <AssemblyReference>System.Activities</AssemblyReference>
+          <AssemblyReference>mscorlib</AssemblyReference>
+          <AssemblyReference>System.Data</AssemblyReference>
+          <AssemblyReference>System</AssemblyReference>
+          <AssemblyReference>System.Core</AssemblyReference>
+          <AssemblyReference>System.Management.Automation</AssemblyReference>
+          <AssemblyReference>System.Xml</AssemblyReference>
+          <AssemblyReference>System.Xml.Linq</AssemblyReference>
+          <AssemblyReference>UiPath.Library</AssemblyReference>
+          <AssemblyReference>PresentationFramework</AssemblyReference>
+          <AssemblyReference>WindowsBase</AssemblyReference>
+          <AssemblyReference>PresentationCore</AssemblyReference>
+          <AssemblyReference>System.Xaml</AssemblyReference>
+        </sco:Collection>
+      </TextExpression.References>
+      <sap2010:WorkflowViewState.ViewStateManager>
+        <sap2010:ViewStateManager>
+          <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="200,22" Id="Delay_1" />
+        </sap2010:ViewStateManager>
+      </sap2010:WorkflowViewState.ViewStateManager>
+    </Delay>
+    <aa:AttendedRobotStatus DisplayName="Attended Robot Status" ErrorLvl="False" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="AttendedRobotStatus_5" InfoLvl="False" Message="Click all See More link in Expreiance if exist" WarnLvl="False" />
+    <ui:InjectJsScript InputParameter="{x:Null}" ScriptOutput="{x:Null}" DisplayName="Click All See More" sap:VirtualizedContainerService.HintSize="484,52.6666666666667" sap2010:WorkflowViewState.IdRef="InjectJsScript_3" ScriptCode="scripts\js\clickseemore.js">
+      <ui:InjectJsScript.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="edec30ebecf15bdddbae711d13997708" Selector="&lt;html app='firefox.exe' title='*LinkedIn' /&gt;&lt;webctrl omit:id='ember40' tag='DIV' /&gt;" WaitForReady="INTERACTIVE">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+        </ui:Target>
+      </ui:InjectJsScript.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InjectJsScript>
+    <ui:InjectJsScript InputParameter="{x:Null}" DisplayName="Get Title" sap:VirtualizedContainerService.HintSize="484,52.6666666666667" sap2010:WorkflowViewState.IdRef="InjectJsScript_1" ScriptCode="scripts\js\gettitle.js">
+      <ui:InjectJsScript.ScriptOutput>
+        <OutArgument x:TypeArguments="x:String">[title]</OutArgument>
+      </ui:InjectJsScript.ScriptOutput>
+      <ui:InjectJsScript.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="bd548461ca3bdab5a6027a64aabd5953" Selector="&lt;html app='firefox.exe' title='*LinkedIn' /&gt;&lt;webctrl omit:id='ember*' tag='DIV' idx='19' /&gt;" WaitForReady="INTERACTIVE">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+        </ui:Target>
+      </ui:InjectJsScript.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InjectJsScript>
+    <aa:AttendedRobotStatus DisplayName="Attended Robot Status" ErrorLvl="False" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="AttendedRobotStatus_6" InfoLvl="False" Message="Get Source Code" WarnLvl="False" />
+    <ui:InjectJsScript InputParameter="{x:Null}" DisplayName="Get Source Code" sap:VirtualizedContainerService.HintSize="484,52.6666666666667" sap2010:WorkflowViewState.IdRef="InjectJsScript_2" ScriptCode="scripts\js\getsource.js">
+      <ui:InjectJsScript.ScriptOutput>
+        <OutArgument x:TypeArguments="x:String">[source]</OutArgument>
+      </ui:InjectJsScript.ScriptOutput>
+      <ui:InjectJsScript.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="bd548461ca3bdab5a6027a64aabd5953" Selector="&lt;html app='firefox.exe' title='*LinkedIn' /&gt;&lt;webctrl omit:id='ember*' tag='DIV' idx='19' /&gt;" WaitForReady="INTERACTIVE">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+        </ui:Target>
+      </ui:InjectJsScript.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InjectJsScript>
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="&#xA;'vb.net code invocation,&#xA;&#xA;Dim regex As System.text.RegularExpressions.Regex&#xA;&#xA;'regex invocation&#xA;titleName =  Regex.Replace(titleName, &quot;[^a-zA-Z 0-9-/-]&quot;, &quot;&quot;)&#xA;&#xA;'vb.net string manuplation&#xA;titleName = titleName.Replace(&quot;LinkedIn&quot;,&quot;&quot;)&#xA;titleName = trim(titleName)&#xA;" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="484,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+      <ui:InvokeCode.Arguments>
+        <InOutArgument x:TypeArguments="x:String" x:Key="titleName">[title]</InOutArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+    <aa:AttendedRobotStatus DisplayName="Attended Robot Status" ErrorLvl="False" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="AttendedRobotStatus_7" InfoLvl="False" Message="Save source code to local disk" WarnLvl="False" />
+    <ui:WriteTextFile DisplayName="Write Text File" FileName="[String.Format(&quot;sources\{0}.html&quot;,title)]" sap:VirtualizedContainerService.HintSize="484,86.6666666666667" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[source]" />
+    <Assign sap:VirtualizedContainerService.HintSize="484,62" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[sourcepath]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[String.Format("C:\Users\pkuma528\Documents\UiPath\Scrape_Linkendin\sources\{0}.html",title)]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <While sap:VirtualizedContainerService.HintSize="484,340" sap2010:WorkflowViewState.IdRef="While_2">
+      <While.Variables>
+        <Variable x:TypeArguments="x:Boolean" Name="ctr" />
+      </While.Variables>
+      <While.Condition>[not System.IO.File.Exists(sourcepath)]</While.Condition>
+      <Sequence sap:VirtualizedContainerService.HintSize="242,176" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <aa:AttendedRobotStatus DisplayName="Attended Robot Status" ErrorLvl="False" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AttendedRobotStatus_8" InfoLvl="False" Message="Wait : Source code being saved to local disk" WarnLvl="False" />
+        <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Wait for file to show up on system" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_1">
+          <TextExpression.Namespaces>
+            <sco:Collection x:TypeArguments="x:String">
+              <x:String>System.Activities</x:String>
+              <x:String>System.Activities.Statements</x:String>
+              <x:String>System.Activities.Expressions</x:String>
+              <x:String>System.Activities.Validation</x:String>
+              <x:String>System.Activities.XamlIntegration</x:String>
+              <x:String>Microsoft.VisualBasic.Activities</x:String>
+              <x:String>System</x:String>
+              <x:String>System.Collections.Generic</x:String>
+              <x:String>System.Data</x:String>
+              <x:String>System.Diagnostics</x:String>
+              <x:String>System.IO</x:String>
+              <x:String>System.Linq</x:String>
+              <x:String>System.Management.Automation</x:String>
+              <x:String>System.Net.Mail</x:String>
+              <x:String>System.Xml</x:String>
+              <x:String>System.Xml.Linq</x:String>
+              <x:String>UiPath.Library</x:String>
+              <x:String>System.Windows.Markup</x:String>
+            </sco:Collection>
+          </TextExpression.Namespaces>
+          <TextExpression.References>
+            <sco:Collection x:TypeArguments="AssemblyReference">
+              <AssemblyReference>System.Activities</AssemblyReference>
+              <AssemblyReference>mscorlib</AssemblyReference>
+              <AssemblyReference>System.Data</AssemblyReference>
+              <AssemblyReference>System</AssemblyReference>
+              <AssemblyReference>System.Core</AssemblyReference>
+              <AssemblyReference>System.Management.Automation</AssemblyReference>
+              <AssemblyReference>System.Xml</AssemblyReference>
+              <AssemblyReference>System.Xml.Linq</AssemblyReference>
+              <AssemblyReference>UiPath.Library</AssemblyReference>
+              <AssemblyReference>PresentationFramework</AssemblyReference>
+              <AssemblyReference>WindowsBase</AssemblyReference>
+              <AssemblyReference>PresentationCore</AssemblyReference>
+              <AssemblyReference>System.Xaml</AssemblyReference>
+            </sco:Collection>
+          </TextExpression.References>
+          <sap2010:WorkflowViewState.ViewStateManager>
+            <sap2010:ViewStateManager>
+              <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="200,22" Id="Delay_1" />
+            </sap2010:ViewStateManager>
+          </sap2010:WorkflowViewState.ViewStateManager>
+        </Delay>
+      </Sequence>
+    </While>
+  </Sequence>
+</Activity>

@@ -1,0 +1,23 @@
+function(e) { 
+
+    var i;
+    var arrlen;
+    arrSeemore = document.getElementsByClassName('lt-line-clamp__more');
+    arrlen = arrSeemore.length;
+    arrlen = arrlen - 4;
+
+    var iserror;
+    
+
+    for(i= 1;i <= arrlen;i++)
+    {   
+        try {
+            arrSeemore[i].click();
+        }catch(err) {
+            iserror = "True"
+        }
+        
+        if( iserror == "True") break
+    }
+
+}
