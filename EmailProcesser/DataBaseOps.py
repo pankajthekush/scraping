@@ -1,11 +1,12 @@
 
 
-
-
 import psycopg2
+import csv
+
 
 def getconnection():
-    connection = psycopg2.connect(user = "postgres",password = "PASSWORD",host = "localhost", port = "5432",database = "gmail")
+    pwd = input("Enter Password")
+    connection = psycopg2.connect(user = "postgres",password = pwd,host = "localhost", port = "5432",database = "gmail")
     return connection
 
 def insertemaildata(connection,record_to_insert):
@@ -20,22 +21,29 @@ def insertemaildata(connection,record_to_insert):
 
         connection.close()
         if psycopg2.errors.UniqueViolation:
-            print("Unique key violation")
-            connection.close()
+            return False
         else:
-            raise error
-            connection.close()
-        
-def ts():
-    conn = getconnection()
-    insertemaildata(conn)
+            return False
+    return True
 
 
 
 def insert_data():
-    with open("localdb.csv",'r') as file:
-        for line in file:
-            print(line)
+    data = []
 
+    connection = getconnection()
 
+    try:
+        with open("localdb.csv",encoding='utf-8-sig',mode="a") as file:
+            data = csv.reader(file)    
+            for row in data:
+                inputdata = tuple(row)
+                inresult = insertemaildata( connection, inputdata)
+                print(inresult)
+            connection.close()
+    except Exception as error:
+        connection.close()                
+        raise error
 insert_data()
+
+

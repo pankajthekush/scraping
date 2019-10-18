@@ -162,6 +162,16 @@
         "C:\\Users\\pkuma528\\.nuget\\packages\\uipath.vision/1.8.1-beta.561185\\lib/net452/UiPath.Vision.Tesseract.dll",
         "C:\\Users\\pkuma528\\.nuget\\packages\\uipath.vision/1.8.1-beta.561185\\lib/net452/UiPath.Vision.dll"
       ]
+    },
+    {
+      "Package": {
+        "Id": "UiPath.Credentials.Activities",
+        "Version": "1.1.6479.13204"
+      },
+      "Assemblies": [
+        "C:\\Users\\pkuma528\\.nuget\\packages\\credentialmanagement/1.0.2\\lib/net35/CredentialManagement.dll",
+        "C:\\Users\\pkuma528\\.nuget\\packages\\uipath.credentials.activities/1.1.6479.13204\\lib/net40-client/UiPath.Credentials.Activities.dll"
+      ]
     }
   ],
   "Conflicts": [],
@@ -189,6 +199,11 @@
     "Crc32C.NET": {
       "Id": "Crc32C.NET",
       "Version": "1.0.5",
+      "Dependencies": []
+    },
+    "CredentialManagement": {
+      "Id": "CredentialManagement",
+      "Version": "1.0.2",
       "Dependencies": []
     },
     "CsvHelper": {
@@ -355,6 +370,16 @@
       "Id": "UiPath",
       "Version": "19.10.7220.12741",
       "Dependencies": []
+    },
+    "UiPath.Credentials.Activities": {
+      "Id": "UiPath.Credentials.Activities",
+      "Version": "1.1.6479.13204",
+      "Dependencies": [
+        {
+          "Item1": "CredentialManagement",
+          "Item2": "[1.0.2, )"
+        }
+      ]
     },
     "UiPath.Database.Activities": {
       "Id": "UiPath.Database.Activities",

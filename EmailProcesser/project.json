@@ -6,6 +6,7 @@
     "MongoDB.Bson": "[2.9.2]",
     "MongoDB.Driver": "[2.9.2]",
     "MongoDB.Driver.Core": "[2.9.2]",
+    "UiPath.Credentials.Activities": "[1.1.6479.13204]",
     "UiPath.Database.Activities": "[1.2.6863.32528]",
     "UiPath.Excel.Activities": "[2.7.1-beta.557523]",
     "UiPath.Mail.Activities": "[1.7.1-beta.557462]",
