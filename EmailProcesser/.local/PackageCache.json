@@ -2,44 +2,12 @@
   "Packages": [
     {
       "Package": {
-        "Id": "MongoDB.Bson",
-        "Version": "2.9.2"
+        "Id": "UiPath.Credentials.Activities",
+        "Version": "1.1.6479.13204"
       },
       "Assemblies": [
-        "C:\\Users\\pkuma528\\.nuget\\packages\\mongodb.bson/2.9.2\\lib/net452/MongoDB.Bson.dll"
-      ]
-    },
-    {
-      "Package": {
-        "Id": "MongoDB.Driver",
-        "Version": "2.9.2"
-      },
-      "Assemblies": [
-        "C:\\Users\\pkuma528\\.nuget\\packages\\crc32c.net/1.0.5\\lib/net20/Crc32C.NET.dll",
-        "C:\\Users\\pkuma528\\.nuget\\packages\\dnsclient/1.2.0\\lib/net45/DnsClient.dll",
-        "C:\\Users\\pkuma528\\.nuget\\packages\\mongodb.bson/2.9.2\\lib/net452/MongoDB.Bson.dll",
-        "C:\\Users\\pkuma528\\.nuget\\packages\\mongodb.driver/2.9.2\\lib/net452/MongoDB.Driver.dll",
-        "C:\\Users\\pkuma528\\.nuget\\packages\\mongodb.driver.core/2.9.2\\lib/net452/MongoDB.Driver.Core.dll",
-        "C:\\Users\\pkuma528\\.nuget\\packages\\sharpcompress/0.23.0\\lib/net45/SharpCompress.dll",
-        "C:\\Users\\pkuma528\\.nuget\\packages\\snappy.net/1.1.1.8\\lib/net45/Snappy.NET.dll",
-        "C:\\Users\\pkuma528\\.nuget\\packages\\system.buffers/4.4.0\\lib/netstandard2.0/System.Buffers.dll",
-        "C:\\Users\\pkuma528\\.nuget\\packages\\system.runtime.interopservices.runtimeinformation/4.3.0\\lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll"
-      ]
-    },
-    {
-      "Package": {
-        "Id": "MongoDB.Driver.Core",
-        "Version": "2.9.2"
-      },
-      "Assemblies": [
-        "C:\\Users\\pkuma528\\.nuget\\packages\\crc32c.net/1.0.5\\lib/net20/Crc32C.NET.dll",
-        "C:\\Users\\pkuma528\\.nuget\\packages\\dnsclient/1.2.0\\lib/net45/DnsClient.dll",
-        "C:\\Users\\pkuma528\\.nuget\\packages\\mongodb.bson/2.9.2\\lib/net452/MongoDB.Bson.dll",
-        "C:\\Users\\pkuma528\\.nuget\\packages\\mongodb.driver.core/2.9.2\\lib/net452/MongoDB.Driver.Core.dll",
-        "C:\\Users\\pkuma528\\.nuget\\packages\\sharpcompress/0.23.0\\lib/net45/SharpCompress.dll",
-        "C:\\Users\\pkuma528\\.nuget\\packages\\snappy.net/1.1.1.8\\lib/net45/Snappy.NET.dll",
-        "C:\\Users\\pkuma528\\.nuget\\packages\\system.buffers/4.4.0\\lib/netstandard2.0/System.Buffers.dll",
-        "C:\\Users\\pkuma528\\.nuget\\packages\\system.runtime.interopservices.runtimeinformation/4.3.0\\lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll"
+        "C:\\Users\\pkuma528\\.nuget\\packages\\credentialmanagement/1.0.2\\lib/net35/CredentialManagement.dll",
+        "C:\\Users\\pkuma528\\.nuget\\packages\\uipath.credentials.activities/1.1.6479.13204\\lib/net40-client/UiPath.Credentials.Activities.dll"
       ]
     },
     {
@@ -90,6 +58,24 @@
         "C:\\Users\\pkuma528\\.nuget\\packages\\uipath.mail.activities/1.7.1-beta.557462\\lib/net461/UiPath.Mail.Activities.Design.dll",
         "C:\\Users\\pkuma528\\.nuget\\packages\\uipath.mail.activities/1.7.1-beta.557462\\lib/net461/UiPath.Mail.Activities.dll",
         "C:\\Users\\pkuma528\\.nuget\\packages\\uipath.mail.activities/1.7.1-beta.557462\\lib/net461/UiPath.Mail.dll"
+      ]
+    },
+    {
+      "Package": {
+        "Id": "UiPath.Python.Activities",
+        "Version": "1.1.6863.33404"
+      },
+      "Assemblies": [
+        "C:\\Users\\pkuma528\\.nuget\\packages\\uipath.python.activities/1.1.6863.33404\\lib/net452/UiPath.Python.Activities.Design.dll",
+        "C:\\Users\\pkuma528\\.nuget\\packages\\uipath.python.activities/1.1.6863.33404\\lib/net452/UiPath.Python.Activities.dll",
+        "C:\\Users\\pkuma528\\.nuget\\packages\\uipath.python.activities/1.1.6863.33404\\lib/net452/UiPath.Python.dll",
+        "C:\\Users\\pkuma528\\.nuget\\packages\\uipath.python.activities/1.1.6863.33404\\lib/net452/x64/Python.Runtime.35.dll",
+        "C:\\Users\\pkuma528\\.nuget\\packages\\uipath.python.activities/1.1.6863.33404\\lib/net452/x64/Python.Runtime.36.dll",
+        "C:\\Users\\pkuma528\\.nuget\\packages\\uipath.python.activities/1.1.6863.33404\\lib/net452/x86/Python.Runtime.27.dll",
+        "C:\\Users\\pkuma528\\.nuget\\packages\\uipath.python.activities/1.1.6863.33404\\lib/net452/x86/Python.Runtime.33.dll",
+        "C:\\Users\\pkuma528\\.nuget\\packages\\uipath.python.activities/1.1.6863.33404\\lib/net452/x86/Python.Runtime.34.dll",
+        "C:\\Users\\pkuma528\\.nuget\\packages\\uipath.python.activities/1.1.6863.33404\\lib/net452/x86/Python.Runtime.35.dll",
+        "C:\\Users\\pkuma528\\.nuget\\packages\\uipath.python.activities/1.1.6863.33404\\lib/net452/x86/Python.Runtime.36.dll"
       ]
     },
     {
@@ -165,30 +151,16 @@
     },
     {
       "Package": {
-        "Id": "UiPath.Credentials.Activities",
-        "Version": "1.1.6479.13204"
+        "Id": "UiPath.WebAPI.Activities",
+        "Version": "1.4.4"
       },
       "Assemblies": [
-        "C:\\Users\\pkuma528\\.nuget\\packages\\credentialmanagement/1.0.2\\lib/net35/CredentialManagement.dll",
-        "C:\\Users\\pkuma528\\.nuget\\packages\\uipath.credentials.activities/1.1.6479.13204\\lib/net40-client/UiPath.Credentials.Activities.dll"
-      ]
-    },
-    {
-      "Package": {
-        "Id": "UiPath.Python.Activities",
-        "Version": "1.1.6863.33404"
-      },
-      "Assemblies": [
-        "C:\\Users\\pkuma528\\.nuget\\packages\\uipath.python.activities/1.1.6863.33404\\lib/net452/UiPath.Python.Activities.Design.dll",
-        "C:\\Users\\pkuma528\\.nuget\\packages\\uipath.python.activities/1.1.6863.33404\\lib/net452/UiPath.Python.Activities.dll",
-        "C:\\Users\\pkuma528\\.nuget\\packages\\uipath.python.activities/1.1.6863.33404\\lib/net452/UiPath.Python.dll",
-        "C:\\Users\\pkuma528\\.nuget\\packages\\uipath.python.activities/1.1.6863.33404\\lib/net452/x64/Python.Runtime.35.dll",
-        "C:\\Users\\pkuma528\\.nuget\\packages\\uipath.python.activities/1.1.6863.33404\\lib/net452/x64/Python.Runtime.36.dll",
-        "C:\\Users\\pkuma528\\.nuget\\packages\\uipath.python.activities/1.1.6863.33404\\lib/net452/x86/Python.Runtime.27.dll",
-        "C:\\Users\\pkuma528\\.nuget\\packages\\uipath.python.activities/1.1.6863.33404\\lib/net452/x86/Python.Runtime.33.dll",
-        "C:\\Users\\pkuma528\\.nuget\\packages\\uipath.python.activities/1.1.6863.33404\\lib/net452/x86/Python.Runtime.34.dll",
-        "C:\\Users\\pkuma528\\.nuget\\packages\\uipath.python.activities/1.1.6863.33404\\lib/net452/x86/Python.Runtime.35.dll",
-        "C:\\Users\\pkuma528\\.nuget\\packages\\uipath.python.activities/1.1.6863.33404\\lib/net452/x86/Python.Runtime.36.dll"
+        "C:\\Users\\pkuma528\\.nuget\\packages\\avalonedit/5.0.3\\lib/Net40/ICSharpCode.AvalonEdit.dll",
+        "C:\\Users\\pkuma528\\.nuget\\packages\\newtonsoft.json/11.0.2\\lib/net45/Newtonsoft.Json.dll",
+        "C:\\Users\\pkuma528\\.nuget\\packages\\restsharp/106.3.1\\lib/net452/RestSharp.dll",
+        "C:\\Users\\pkuma528\\.nuget\\packages\\uipath.webapi.activities/1.4.4\\lib/net452/UiPath.Web.Activities.Design.dll",
+        "C:\\Users\\pkuma528\\.nuget\\packages\\uipath.webapi.activities/1.4.4\\lib/net452/UiPath.Web.Activities.dll",
+        "C:\\Users\\pkuma528\\.nuget\\packages\\uipath.webapi.activities/1.4.4\\lib/net452/UiPath.Web.dll"
       ]
     }
   ],
@@ -214,11 +186,6 @@
         }
       ]
     },
-    "Crc32C.NET": {
-      "Id": "Crc32C.NET",
-      "Version": "1.0.5",
-      "Dependencies": []
-    },
     "CredentialManagement": {
       "Id": "CredentialManagement",
       "Version": "1.0.2",
@@ -228,16 +195,6 @@
       "Id": "CsvHelper",
       "Version": "2.13.5",
       "Dependencies": []
-    },
-    "DnsClient": {
-      "Id": "DnsClient",
-      "Version": "1.2.0",
-      "Dependencies": [
-        {
-          "Item1": "System.Buffers",
-          "Item2": "[4.4.0, )"
-        }
-      ]
     },
     "DocumentFormat.OpenXml": {
       "Id": "DocumentFormat.OpenXml",
@@ -289,51 +246,6 @@
       "Version": "7.10.6071",
       "Dependencies": []
     },
-    "MongoDB.Bson": {
-      "Id": "MongoDB.Bson",
-      "Version": "2.9.2",
-      "Dependencies": []
-    },
-    "MongoDB.Driver": {
-      "Id": "MongoDB.Driver",
-      "Version": "2.9.2",
-      "Dependencies": [
-        {
-          "Item1": "MongoDB.Bson",
-          "Item2": "[2.9.2, )"
-        },
-        {
-          "Item1": "MongoDB.Driver.Core",
-          "Item2": "[2.9.2, )"
-        }
-      ]
-    },
-    "MongoDB.Driver.Core": {
-      "Id": "MongoDB.Driver.Core",
-      "Version": "2.9.2",
-      "Dependencies": [
-        {
-          "Item1": "MongoDB.Bson",
-          "Item2": "[2.9.2, )"
-        },
-        {
-          "Item1": "DnsClient",
-          "Item2": "[1.2.0, )"
-        },
-        {
-          "Item1": "SharpCompress",
-          "Item2": "[0.23.0, )"
-        },
-        {
-          "Item1": "Snappy.NET",
-          "Item2": "[1.1.1.8, )"
-        },
-        {
-          "Item1": "System.Runtime.InteropServices.RuntimeInformation",
-          "Item2": "[4.3.0, )"
-        }
-      ]
-    },
     "Newtonsoft.Json": {
       "Id": "Newtonsoft.Json",
       "Version": "11.0.2",
@@ -349,34 +261,14 @@
         }
       ]
     },
-    "SharpCompress": {
-      "Id": "SharpCompress",
-      "Version": "0.23.0",
+    "RestSharp": {
+      "Id": "RestSharp",
+      "Version": "106.3.1",
       "Dependencies": []
     },
     "SharpZipLib": {
       "Id": "SharpZipLib",
       "Version": "1.0.0",
-      "Dependencies": []
-    },
-    "Snappy.NET": {
-      "Id": "Snappy.NET",
-      "Version": "1.1.1.8",
-      "Dependencies": [
-        {
-          "Item1": "Crc32C.NET",
-          "Item2": "[1.0.5, )"
-        }
-      ]
-    },
-    "System.Buffers": {
-      "Id": "System.Buffers",
-      "Version": "4.4.0",
-      "Dependencies": []
-    },
-    "System.Runtime.InteropServices.RuntimeInformation": {
-      "Id": "System.Runtime.InteropServices.RuntimeInformation",
-      "Version": "4.3.0",
       "Dependencies": []
     },
     "System.ValueTuple": {
@@ -529,6 +421,24 @@
         {
           "Item1": "UiPath.OCR.Contracts",
           "Item2": "[2.2.1-beta, )"
+        }
+      ]
+    },
+    "UiPath.WebAPI.Activities": {
+      "Id": "UiPath.WebAPI.Activities",
+      "Version": "1.4.4",
+      "Dependencies": [
+        {
+          "Item1": "AvalonEdit",
+          "Item2": "[5.0.3, )"
+        },
+        {
+          "Item1": "Newtonsoft.Json",
+          "Item2": "[11.0.2, )"
+        },
+        {
+          "Item1": "RestSharp",
+          "Item2": "[106.3.1, )"
         }
       ]
     }

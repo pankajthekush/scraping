@@ -25,6 +25,17 @@ def returnphone():
     retpphone = " ".join(t.strip() for t in phone)
     return retpphone
 
+
+def returnplainbody():
+     
+    url = r"C:\etemp\body.html"
+    page = open(url)
+    soup = BeautifulSoup(page.read(),'html.parser')
+    texts = soup.find_all(text=True)
+    text = " ".join(t.strip() for t in texts)
+    return text
+
+
 def parse():
     
     url = r"C:\etemp\body.html"
