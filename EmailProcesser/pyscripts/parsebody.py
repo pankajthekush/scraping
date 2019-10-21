@@ -27,14 +27,16 @@ def returnphone():
 
 
 def returnplainbody():
-     
-    url = r"C:\etemp\body.html"
-    page = open(url)
-    soup = BeautifulSoup(page.read(),'html.parser')
-    texts = soup.find_all(text=True)
-    text = " ".join(t.strip() for t in texts)
-    return text
-
+    
+    try:
+        url = r"C:\etemp\body.html"
+        page = open(url)
+        soup = BeautifulSoup(page.read(),'html.parser')
+        texts = soup.find_all(text=True)
+        text = " ".join(t.strip() for t in texts)
+        return text
+    except:
+        return "No Text Body Found"
 
 def parse():
     
@@ -50,9 +52,15 @@ def parse():
 def returndatadict():
     
     dictdata = {'PHONE':'','Total Experience':'','CTC':'','Notice Period':'' ,'Keyskills':'','Tell us something about yourself in minimum 50 words.':'',"What is your total experience in Recruitment?":'','What would your role be if you were to do this job?':'','What is the job location for this profile?':''}
+    
+    try:
+        data =  parse()
+    except:
+        data = ['NOTFOUND','NOTFOUND','NOTFOUND','NOTFOUND','NOTFOUND','NOTFOUND']
+    if len(data) == 0:
+        data = ['NOTFOUND','NOTFOUND','NOTFOUND','NOTFOUND','NOTFOUND','NOTFOUND']
 
-    data =  parse()
-
+    print(data)
     for key in dictdata.keys():
           
         try:
@@ -60,6 +68,7 @@ def returndatadict():
             dictdata[key] = keyindex
         except ValueError:
             keyindex = -1
+            dictdata[key] = keyindex
 
     for key in dictdata.keys():
         if key == 'CTC':
