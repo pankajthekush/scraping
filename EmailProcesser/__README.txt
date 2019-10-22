@@ -1,0 +1,1 @@
+This UiPaht + Python program created to extract data from emails received from the job applicants , it downlaods their resume , get body text and get other email information.
